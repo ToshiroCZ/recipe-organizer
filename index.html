@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RecipeOrganizer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Recipe Organizer</h1>
+    <button id="menu-toggle">&#9776;</button>
+    <div class="menu">
+      <nav>
+        <div class="left">
+          <ul>
+            <li><a href="#">Domů</a></li>
+            <li><a href="#">Recepty</a></li>
+            <li><a href="#recipeForm">Přidat recept</a></li>
+            <li><a href="obli">Oblíbené recepty</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="login.html">Přihlášení</a></li>
+            <li><a href="register.html">Registrace</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>  
+  </header>
+
+  <main>
+
+    <section id="search-recipes">
+      <h2>Vyhledávání receptů</h2>
+      <form>
+        <input type="text" placeholder="Vyhledat recept">
+        <button class="button" type="submit">Hledat</button>
+      </form>
+    </section>
+
+    <section id="recipe-categories">
+      <h2>Kategorie receptů</h2>
+      <ul>
+        <li><a href="#">Snídaně</a></li>
+        <li><a href="#">Obědy</a></li>
+        <li><a href="#">Večeře</a></li>
+        <li><a href="#">Dezerty</a></li>
+      </ul>
+    </section>
+
+    <section id="recipes">
+      <div id="recipes-heading">
+        <h2>Recepty</h2>
+      </div>
+      <div id="recipes-container">
+
+        <div class="recipe-card">
+          <h3>Název receptu 1</h3>
+        </div>
+
+        <div class="recipe-card">
+          <h3>Název receptu 2</h3>
+        </div>
+
+        <div class="recipe-card">
+          <h3>Název receptu 3</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <form id="recipeForm">
+      <div class="form-group"></div>
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="titleInput" placeholder="Recipe Title">
+      </div>
+      <div class="form-group"></div>
+        <label for="ingredients" class="form-label">Ingredients</label>
+        <input type="text" id="ingredientsInput" placeholder="Ingredients">
+      </div>
+      <div class="form-group">
+        <label for="instructions" class="form-label">Instructions</label>
+        <input type="text" id="instructionsInput" placeholder="Instructions">
+      </div>
+        <button class="button" id="saveButton">Save Recipe</button>
+    </div>
+    <h2>Recipe List</h2>
+    <ul id="recipeList" class="recipe-list"></ul>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Recipe Organizer. Všechna práva vyhrazena.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
